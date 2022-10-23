@@ -1,7 +1,7 @@
-const path = require('path');
-const { merge: mergeConfig } = require('webpack-merge');
-const baseConfig = require('./webpack.base');
-const ReactFreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const path = require('path')
+const { merge: mergeConfig } = require('webpack-merge')
+const baseConfig = require('./webpack.base')
+const ReactFreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 
 module.exports = mergeConfig(baseConfig, {
   mode: 'development',
@@ -9,8 +9,8 @@ module.exports = mergeConfig(baseConfig, {
   devServer: {
     port: 80,
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, 'dist')
     },
-    compress: true,
-  },
-});
+    compress: true
+  }
+})
